@@ -1,0 +1,11 @@
+<!-- templates/edit_photo_form.html.jinja2 -->
+<form
+  id="photo-edit-fields-{{ photo.doc_id }}"
+  hx-post="/edit-photo"
+  hx-target="#photo-edit-fields-{{ photo.doc_id }}"
+  hx-swap="outerHTML"
+>
+  <input type="hidden" name="photo_id"    value="{{ photo.doc_id }}"/>
+  <textarea name="entry" class="…">{{ photo.entry }}</textarea>
+  <button type="submit" class="…">Save</button>
+</form>
